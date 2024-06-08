@@ -12,7 +12,7 @@ internal class GetOneByIdQueryHandler(IRestaurantsRepository restaurantsReposito
 {
     public async Task<RestaurantDto?> Handle(GetOneByIdQuery request, CancellationToken cancellationToken)
     {
-        logger.LogInformation($"Getting one restaurant {request.Id}");
+        logger.LogInformation("Getting one restaurant {RestaurantId}", request.Id);
         var restaurant = await restaurantsRepository.GetOneByIdAsync(request.Id);
         var restaurantDto = mapper.Map<RestaurantDto>(restaurant);
         return restaurantDto;
