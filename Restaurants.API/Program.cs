@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
+builder.Services.AddScoped<ErrorToLongRequestMiddleware>();
 
 
 builder.Services.AddApplication();
@@ -31,6 +32,7 @@ await seeder.Seed();
 // Configure the HTTP request pipeline.
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<ErrorToLongRequestMiddleware>();
 
 app.UseSerilogRequestLogging();
 
