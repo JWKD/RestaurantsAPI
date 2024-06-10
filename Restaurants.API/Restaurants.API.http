@@ -50,3 +50,21 @@ Content-Type: application/json
 }
 
 ###
+
+POST https://localhost:7195/register
+Content-Type: application/json
+
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}
+
+###
+
+POST https://localhost:7195/login
+Content-Type: application/json
+
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}
