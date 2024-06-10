@@ -1,17 +1,8 @@
-@Restaurants.API_HostAddress = https://localhost:7195
-@RestaurantsAPI_HostAddress = https://localhost:7195
+@token = CfDJ8L99Fa4JUhtEhTsuMmUlx8oqjVQWioXyXWriiqWCKrGR2gERn9x2fwuCPaocK_UmDxcwKHvCY0YfyCpmspdn4yx727_LWlh2I0B-05X72gODZEOYeNqO94NQSa4CvyzFw_sL42JdGvCAns-0oIhR_agsUiRmw6iPhgYIdrNyQ_sq1tOO4UryIV8T-fWQ2sd3G3alhBQen9r0gnOcyhZodKeeuJzClXfnUc3qJwIaNNXWsdF03LlaWAOgFjWRHYu10KZaIZYe_Kac9v0j-a3xXvdEGt2AXPt7QRd5brw-w87QRq_CZ6xPFELNEepkuY7SVvLPsifxg67LT8mhICl1avFH_hvlUCzzuEF0F5VOV_7pguNjbX-yaNQxurVQRvb56hClWDMDu4VGVAPIP9m04bMoi65nVtev6vHcJjWKphfg10oZqSOc8oR_4PdMLGQO02BOw5mG07dJjX21Ra0C0gW-byUWF3PCramqhDUsEsfjiivMx1A9rhw-TW8acpbezdq94_TX24Ps465lQ1XE0M1VAnQB7_2hW7LlxUHXzHiV5Pi750A3vdgs4L9kGoCF0JlbyDmwoZMZOQHBBXFacB-lev2cvYoYUbYcNkolxCacsZ2MW7LMAdsPEamPo1uZJht_3BppPnQxDHAl3beQhrKrWBBq4XBK640R5gFW9mqAYuW9r2NG0XHep6hgtt9thA
 
-POST https://localhost:7195/api/weatherforecast/generate?returnedAmount=4
-Content-Type: application/json
-
-{
-  "min" : -23,
-  "max" : 23
-}
-
-###
 
 GET https://localhost:7195/api/restaurants
+Authorization: Bearer{{token}}
 
 ###
 
@@ -51,7 +42,7 @@ Content-Type: application/json
 
 ###
 
-POST https://localhost:7195/register
+POST https://localhost:7195/api/identity/register
 Content-Type: application/json
 
 {
@@ -61,7 +52,7 @@ Content-Type: application/json
 
 ###
 
-POST https://localhost:7195/login
+POST https://localhost:7195/api/identity/login
 Content-Type: application/json
 
 {
